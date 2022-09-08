@@ -1,0 +1,25 @@
+[package]
+name = "qbjs_deserializer_ffi"
+version = "0.0.1"
+edition = "2021"
+build = "build.rs"
+authors = ["Alexandre Poirot <alexandre.poirot+qbjs_deserializer@gmail.com>"]
+description = "C++ FFI for the qbjs_deserializer crate"
+readme = "README.md"
+homepage = "https://github.com/loreilei/qbjs_deserializer_ffi"
+repository = "https://github.com/loreilei/qbjs_deserializer_ffi"
+license = "MIT"
+license_file = "LICENSE.txt"
+keywords = ["Qt5", "binary", "json", "deserialize"]
+categories = ["encoding"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
+bench = false
+
+[dependencies]
+qbjs_deserializer = "0.0.1"
+
+[build-dependencies]
+cbindgen = "0.24.3"
